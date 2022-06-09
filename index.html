@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Leaflet proof-of-concept - filter GeoJSON based on two parameters</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google -->
+   <meta itemprop="name" content="IETAC" />
+   <meta itemprop="description" content="Mapa de buenos kebabs por el mundo(a futuro)" />
+   <meta itemprop="image" content="http://image" />
+  <!-- meta twitter-->
+  <!-- meta facebook-->
+  
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   
+  
+    <!-- <script type="text/javascript" src="/js/lib/dummy.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="/css/result-light.css"> -->
+  
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  
+    <style id="compiled-css" type="text/css">
+      /* body{
+         overflow: hidden;
+      }  */
+      #map {
+         height: 100%;
+         overflow: hidden;
+         width: 100%;
+         position: absolute;
+      }
+      i{
+         display:inline!important;
+      }
+   
+      .inputs {
+         padding-bottom: 2em;
+      }
+      .logo{
+         width: 66px;
+         height: 40px;
+         display: inline;
+      }
+      #popInformation{
+         z-index:2000;
+      }
+      .inline-icon {
+        vertical-align: bottom;
+        font-size: 18px !important;
+      }
+      .background img {
+        width: 100%;
+      }
+      .background{
+        height: 175px;
+      }
+      .user-view{
+        /* Para compensar que no hay contenido en la sección del backgroun */
+        margin-bottom: 175px!important;
+      }
+      .sidenav{
+        width: 371px;
+      }  
+      #descripcion{
+        padding: 0em 2em 0em 2em;
+       line-height: 30px;
+      }
+    </style>
+
+  </head>
+  <body>
+   <nav>  
+      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large right">Filtros <i class="material-icons inline-icon ">menu</i></a>
+      <!-- <a href="#" data-target="popInformation" class="sidenav-trigger show-on-large"><i class="material-icons inline-icon ">menu</i></a> -->
+      <img class="logo brand-logo center" alt="Logo" src="donerkebab.png" > 
+      <span>Kebadas map</span>
+   </nav>
+   
+
+   <ul id="slide-out" class="sidenav sidenav-menu">
+    <div class="row">
+      <div class="col s12 m9 l10">
+        <h2 class="header">Filtros</h2>
+      </div>
+      <form class="col s12">
+        
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="five">
+              <input type="checkbox" class="filled-in" id="five" name="five" filtro="calidad"  value="five" checked="true">
+             <span>5 <i class="material-icons inline-icon ">star</i></span>
+           </label>
+          </div>
+
+          <div class="input-field col s6">
+            <label for="four">
+              <input type="checkbox" class="filled-in" filtro="calidad" value="four" id="four" checked="true">
+              <span>4 <i class="material-icons inline-icon ">star</i></span>
+             </label>
+          </div>
+      
+          <div class="input-field col s6">
+            <label for="three">
+              <input type="checkbox" class="filled-in" filtro="calidad"  value="three" id="three" checked="true">
+             <span>3 <i class="material-icons inline-icon ">star</i></span>
+           </label>
+          </div>
+          <div class="input-field col s6">
+            <label for="two-one">
+              <input type="checkbox" class="filled-in" filtro="calidad"  value="two-one" id="two-one" checked="true">
+             <span>2-1 <i class="material-icons inline-icon ">star</i></span>
+           </label>
+          </div>
+    
+        </div>
+      </form>
+      <!-- <form id="event-types" class="col s12">
+        
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="unknown">
+              <input type="checkbox" class="filled-in" name="unknown" filtro="event-type" id="unknown"  value="unknown" checked="true">
+             <span>Unknow</span>
+           </label>
+          </div>
+        </div>
+
+      </form> -->
+      <div class="col s12 m9 l10">
+        <div class="divider"></div>
+        <p>Valoraciones hechas con el estómago lleno</p>
+      </div>
+    </div>
+
+
+   </ul>
+   
+
+   <ul id="popInformation" class="sidenav sidenav-info">
+     <li><div class="user-view">
+       <div class="background">
+         <img src="./donerkebab.png">
+       </div>
+       <!-- <a href="#user"><img class="circle" src="imagekebab"></a>
+       <a href="#info"><span class="white-text name">info</span></a>
+       <a href="#data"><span class="white-text email">data</span></a> -->
+     </div></li>
+     <li><a tittle="Direccion" class="waves-effect" target="_blank" href="#!" id="direccion"></a></li>
+     <!-- <li><a href="#!">Second Link</a></li> -->
+     <li><div class="divider"></div></li>
+     <li><a class="subheader">Informacion</a></li>
+     <li><p id="descripcion"></p></li>
+   </ul>
+  
+
+  
+     
+    <div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" >
+       
+     </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="data.js"></script>
+<script type="text/javascript">
+  
+  
+let checkboxStates
+  
+
+
+var mediumIcon = new L.Icon({
+   iconSize: [25, 41], // size of the icon
+   iconAnchor: [5, 5], // point of the icon which will correspond to marker's location
+   popupAnchor: [0, -5], // point from which the popup should open relative to the iconAnchor
+   iconUrl: 'marker-icon-2x.png'
+ });
+var otro = new L.Icon({
+   iconSize: [25, 41], // size of the icon
+   iconAnchor: [5, 5], // point of the icon which will correspond to marker's location
+   popupAnchor: [0, -5], // point from which the popup should open relative to the iconAnchor
+   iconUrl: 'leaf-green.png'
+ });
+  
+
+  const map = L.map('map',{
+    minZoom: 3,
+    maxZoom: 18
+  }).setView([40.4165, -3.70256], 10) //madrid centro con un zoom inicial de 10
+  
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://artulance.com">Kebadas MAP</a>'
+	}).addTo(map);
+  
+  const geojsonLayer = L.geoJSON(null,{
+      filter: (feature) => { 
+        // console.log(feature);
+        const iscalidadChecked = checkboxStates.calidad.includes(feature.properties.calidad);
+      // const isEventTypeChecked = checkboxStates.eventTypes.includes(feature.properties.eventType)
+      // return iscalidadChecked && isEventTypeChecked //only true if both are true
+      return iscalidadChecked;
+    },
+    pointToLayer: function(point, latlng) { 
+       let icono = point.properties.icon; 
+      //  console.log(this[icono]); //Accedo al objeto vía valor de la propiedad
+    return L.marker(latlng, { icon: this[icono] })
+  },
+  coordsToLatLng: function (coords) {
+        // latitude , longitude, altitude
+        //return new L.LatLng(coords[1], coords[0], coords[2]); //Normal behavior
+        return new L.LatLng(coords[0], coords[1], coords[2]);
+    },
+    onEachFeature: function (feature, layer) {
+            layer.on('click', showFlag);
+        }
+  }).addTo(map);
+/*
+,
+    pointToLayer: function(point, latlng) {
+    return L.marker(latlng, { icon: mediumIcon })
+  }
+*/
+  
+  function updateCheckboxStates() {
+      checkboxStates = {
+        calidad: [],
+      eventTypes: []
+    }
+    
+      for (let input of document.querySelectorAll('input')) {
+         //cambio la clase por un atributo
+        let attribute = input.getAttribute('filtro');
+        if(input.checked) {
+          switch (attribute) {
+            case 'event-type': 
+            checkboxStates.eventTypes.push(input.value); 
+            break
+            case 'calidad': 
+            checkboxStates.calidad.push(input.value); 
+            break
+        }
+      }
+    }
+  }
+  
+  
+  for (let input of document.querySelectorAll('input')) {
+    //Listen to 'change' event of all inputs
+    input.onchange = (e) => {
+      geojsonLayer.clearLayers();
+        updateCheckboxStates();
+      geojsonLayer.addData(jsontest);
+    }
+  }
+  
+  
+  /****** INIT ******/
+  updateCheckboxStates();
+  geojsonLayer.addData(jsontest);
+
+  //Array de opciones
+  var  optionsMenu = {edge: 'right'};
+  var  optionsInfo = {edge: 'left'}; //default
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav-menu');
+    var elems2 = document.querySelectorAll('.sidenav-info');
+    var instances = M.Sidenav.init(elems, optionsMenu);
+    var instancesinfo = M.Sidenav.init(elems2, optionsInfo);
+   
+  });
+
+  function showFlag(e) 
+  {
+    openMenu();
+    let direccion =  document.getElementById('direccion');
+    let descripcion =  document.getElementById('descripcion');
+    
+    var layer = e.target;
+    var info =layer.feature.properties;
+    let gurl = "https://maps.google.com/?q="+layer.feature.geometry.coordinates;
+    // console.log(gurl)
+   direccion.setAttribute('href', gurl);
+   direccion.textContent = layer.feature.properties.Calle;
+   descripcion.textContent = layer.feature.properties.descripcion;
+
+}
+  function openMenu()
+  {
+    let eleme =document.getElementById('popInformation');
+    let instance2 = M.Sidenav.getInstance(eleme);
+    // console.log(instancesinfo);
+    instance2.open();
+  }
+  </script>
+  
+    <script>
+      // tell the embed parent frame the height of the content
+      if (window.parent && window.parent.parent){
+        window.parent.parent.postMessage(["resultsFrame", {
+          height: document.body.getBoundingClientRect().height,
+          slug: "rk9v0uyo"
+        }], "*")
+      }
+  
+      // always overwrite window.name, in case users try to set it manually
+      window.name = "result"
+    </script>
+  
+
+  	<!-- 
+///////////////*///****//*******************************************************
+////////////////////*/***/*******/**********************************************
+//////////////////**/*********////*******///************************************
+//////////////////*/*/*/**/////****,,,,******/(%********************************
+//////////****//////***/(////****,,,,,*,*,,,,**/%&******************************
+//////////////////*/*/%/******,,,,,,,,,,,*,*,,,*/#%/****************************
+////*/////**/*/***///%/*****,,,,........,,,,,,,,*(##****************************
+////////*/////*/****/%/****,,,,........,,,,,,,,,*((#%***************************
+///////*/*/*****/***/%(/***,,,,,.......,..,,,,*,**(((#,*************************
+//////////***//**/**/%%(/***,,,,.,,,**(#%%//(*,***/(*,/*************************
+///////*//******/**/*%#(//((##&&%%/,.//,**,/*,*,,***/,,*************************
+//////*/*/*/////*/*//(##//*##,#*//**,,,,.,,,,,,,.,**,***************************
+////////**/**/*/******/((/**,,/,.,**,,,,.,,,,.,,,***(***************************
+//////*/*///*/*/*/*****/*/**,,,,,/**..,,,/,,,**,*,**/***************************
+///////**/*/*************(/**,,/**/(#(#(,,,**(*,,,*//***************************
+////////*/*/**//**/*******(//**/#(#/*,,,.,,,,,,,**////(%(***********************
+//////*//***//**************/**,,*******,,,,,,,*,///**/***########(/************
+////////*/*/***/*************///****,*,,,,,,,*/*//**,,,/**##################%(**
+///////**///**/**/*************&#((//////(((////**,,,,,,*#######################
+///////*//*/*//**********/*/#%%%%((######((((//**,,,,,,,########################
+///////////**/************%%%%%%%%///////**,,,*,*,,,,,##########################
+////////////////*/*****(%###%##%#%#/****/(/,*/*/***/#####(########(###(#########
+/////////////***(#########%#%#####%%%#/*,***//(#######((#######(############((((
+////////////####%#######%######(##############(####(#############((#########(#(#
+//////////###%#######%%####%##############((#(#(#############################(#(
+//////(####(##%##%#####################((#########(###########(#(#(##########(((
+///####################################(###((((####(#((###(##(#####(#######(#(##
+##########################################((#####(#######(######((########(#####
+###################################(###%###(######(#(#(####(#((##(#######(#(####
+###############%#%##################(################((((#(((##(####(#(#(#((####
+###(#####%######%%%#################((##(#######(###(#####(#(##(####(###(#######
+###########%###%&%&%%###################(###################(######(#(#(########
+##########%%&&%%%%@%#############(###(########################(#################
+#####%%%%%%%%%@@@@@###########################################(#####((##########
+##%##%###%%%%%&&///%################################(############(##############
+##%%%%%&&%%&////////%#################################(#############(###########
+##%%%%%%//////////////###########(#################################%############
+%&%////////////////////############################################(#####((##%&%
+((###///////////////////%%%##########################%%##################%%&%##%
+//((*//*/////////////////%&&%################%%%%%%%############(#####&&%###%%%#
+**///,*,****//(//////////%&&@%%%%%%%%%&&%&%%%#############%%%#####%%%##%#%#%####
+*//**,*,(**/*/**/*//*****%&@@@%%%&&%%%###############%%%%#####%&&###%%#%%######%
+///////*/*/***/**,((////*,(**/&%%################%%%%######%&%#%%############%%#
+/*(//****///*/*////*//*/*///,(//*/*/%%##%%%%&@%%%%%####%&&#################%####
+*,*(//*//**((/**,(*(,*/(//*/*//*#//(#//**/%%#####&&@&%##########################
+**/(/(&*/#(((/////(((/****//(////((%/*((#///*//*/@@&&&%%%%%%%%%%%%&@%###%%%%%(/(
+((//#/((//*/#*((#(#/(*(//*/*//(**(/#(/(/(/((#(/*/,**///*/,/*///**(((//(##&#,,,,*
+%(//(///////((/(/(/(//*(#,**((((/(*/(((#%(*(/*#,//(/*((/////**/*,**,*(/**/*////*
+
+
+-->
+  
+  </body>
+  </html>
