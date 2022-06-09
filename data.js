@@ -49,7 +49,7 @@ const jsontest = {
 		},
 		"properties": {
             "Name": "Ateshgah\n",
-			"Calle": "C/ Luis Mateo Díez, 1, 28521 Rivas-Vaciamadrid, Madrid, España\n",
+			"Calle": "Av. de la Albufera, 266, 28018 Madrid\n",
 			"calidad": "four",
 			"descripcion": "En comparación es bastante majo de precio, depende del día te lo pueden dar con un pan crujiente, el sabor de la carne y la salsa esta muy bien. Menú kebab por 6.50€",
 			"notes": "",
@@ -60,7 +60,7 @@ const jsontest = {
 		"type": "Feature",
 		"geometry": {
 			"type": "Point",
-			"coordinates": [40.387618,-3.64124]
+			"coordinates": [40.40934,-3.693189]
 			
 		},
 		"properties": {

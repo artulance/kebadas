@@ -87,6 +87,9 @@
         padding: 0em 2em 0em 2em;
        line-height: 30px;
       }
+      #name{
+        padding: 0px 33px;
+      }
     </style>
 
   </head>
@@ -174,6 +177,7 @@
      <!-- <li><a href="#!">Second Link</a></li> -->
      <li><div class="divider"></div></li>
      <li><a class="subheader">Informacion</a></li>
+     <li><p id="name" class="subheader"></p></li>
      <li><p id="descripcion"></p></li>
    </ul>
   
@@ -301,6 +305,7 @@ var otro = new L.Icon({
     openMenu();
     let direccion =  document.getElementById('direccion');
     let descripcion =  document.getElementById('descripcion');
+    let name =  document.getElementById('name');
     
     var layer = e.target;
     var info =layer.feature.properties;
@@ -309,6 +314,7 @@ var otro = new L.Icon({
    direccion.setAttribute('href', gurl);
    direccion.textContent = layer.feature.properties.Calle;
    descripcion.textContent = layer.feature.properties.descripcion;
+   name.textContent = layer.feature.properties.Name;
 
 }
   function openMenu()
