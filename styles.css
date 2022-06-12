@@ -1,0 +1,80 @@
+/* body{
+         overflow: hidden;
+      }  */
+
+#map {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+}
+
+i {
+    display: inline!important;
+}
+
+.inputs {
+    padding-bottom: 2em;
+}
+
+.logo {
+    width: 66px;
+    height: 40px;
+    display: inline;
+}
+
+#popInformation {
+    z-index: 2000;
+}
+
+.inline-icon {
+    vertical-align: bottom;
+    /* font-size: 18px !important; */
+}
+
+.background img {
+    width: 100%;
+}
+
+.background {
+    height: 175px;
+}
+
+.user-view {
+    /* Para compensar que no hay contenido en la sección del backgroun */
+    margin-bottom: 175px!important;
+}
+
+.sidenav {
+    width: 371px;
+}
+
+#descripcion {
+    padding: 0em 2em 0em 2em;
+    line-height: 30px;
+}
+
+#name {
+    padding: 0px 33px;
+}
+
+.controls {
+    display: block;
+    height: 37px;
+    width: 96px;
+    background-color: rgb(255 255 255);
+    border-radius: 4px 0 0 4px;
+    margin-bottom: 10px;
+    outline: none;
+    right: 0;
+    position: absolute;
+    float: right;
+    z-index: 988;
+    top: 3em;
+    padding: 2px;
+}
+
+.controls a {
+    font-size: 20px;
+    color: black;
+}
