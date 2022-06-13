@@ -18,7 +18,7 @@ const jsontest = {
                 "Name": "Kebab Omar \n",
                 "Calle": " Calle de Juan de Urbieta, 2, 28007 Madrid\n",
                 "calidad": "five",
-                "descripcion": "Situado en un barrio cercano a Atocha, uno de mis lugares favoritos en calidad/precio,con un buen trato pan bien crujiente y un buen, el sabor de ambas salsas estan muy buenas (salsa roja no picante) y económico. Menú kebab por 5.50€",
+                "descripcion": "Situado en el Pacífico (un barrio cercano a Atocha), es el que considero uno de mis lugares favoritos en cuanto a calidad/precio,con un buen trato, tiene muy buena calidad. Cuentan con el pan bien crujiente, con respecto a las dos salsas (roja y yogurt) cuentan con un buen sabor, la salsa roja es no picante. El kebab es muy económico contando que el Menú kebab sale por 5.50€",
                 "notes": "",
                 "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qLFIjFWlzi_tYPmxijHmDQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=128.29865&pitch=0&thumbfov=100",
                 "icon": "fiveStars"
