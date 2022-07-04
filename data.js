@@ -45,6 +45,23 @@ const jsontest = {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
+                "coordinates": [40.400366,-3.651179]
+
+            },
+            "properties": {
+                "Name": "Al aqsa \n",
+                "Calle": "C. de Ramón Pérez de Áyala, 82, 28038 Madrid\n",
+                "calidad": "five",
+                "descripcion": "Entra directamente en el top, buen sabor con un buen pan bien crujiente. Lo mejor de todo la cantidad que te ponen por solo 7€ el menú, estamos hablando de 500Gr de Kebab que sales bien contento de allí. El local está bien,tiene buena ventilación y el trato personal es muy cercano y agradable ",
+                "notes": "",
+                "image": "https://lh5.googleusercontent.com/p/AF1QipOO-WTBdTEYjunQyqQQkoV0on0DojDzxuMBMbum=s762-k-no",
+                "icon": "fiveStars"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
                 "coordinates": [40.387618, -3.64124]
 
             },
