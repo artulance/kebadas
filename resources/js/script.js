@@ -30,6 +30,13 @@ var threeStars = new L.Icon({
     iconUrl: 'resources/markers/marker-icon-3x.png'
 });
 
+var suggestion = new L.Icon({
+    iconSize: [25, 41], // size of the icon
+    iconAnchor: [5, 5], // point of the icon which will correspond to marker's location
+    popupAnchor: [0, -5], // point from which the popup should open relative to the iconAnchor
+    iconUrl: 'resources/markers/marker-icon-suggest.png'
+});
+
 
 const map = L.map('map', {
         minZoom: 3,

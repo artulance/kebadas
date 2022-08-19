@@ -235,6 +235,23 @@
                 "image": "https://lh5.googleusercontent.com/p/AF1QipN1fHhIZv6g6VfzYjR6w0QsEDsOdbbyZgg35ZOL=w203-h360-k-no",
                 "icon": "threeStars"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [48.210937, 16.311405]
+
+            },
+            "properties": {
+                "Name": "King Döner \n",
+                "Calle": "Paltaufgasse 1b Kiosk 7 bei, u3, 1160 Wien, Austria\n",
+                "calidad": "four",
+                "descripcion": "Sugerencia internacional para probar por Viena. Tiene el pan de mantequilla, salsa yogurt excelente y una salsa roja ligeramente picante con chili. (No hablan inglés así que hay que ir señalando lo que quieres). Menú desde 4,5€",
+                "notes": "",
+                "image": "https://lh5.googleusercontent.com/p/AF1QipOMMe9GPk-tEq7Wm1qYSD2rmk8zc-vpzVGb6DCz=s516-k-no",
+                "icon": "suggestion"
+            }
         }
     ]
 }
