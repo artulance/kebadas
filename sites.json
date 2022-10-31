@@ -252,6 +252,23 @@
                 "image": "https://lh5.googleusercontent.com/p/AF1QipOMMe9GPk-tEq7Wm1qYSD2rmk8zc-vpzVGb6DCz=s516-k-no",
                 "icon": "suggestion"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [40.43323, -3.716281]
+
+            },
+            "properties": {
+                "Name": "Restaurante Yunie Kebab \n",
+                "Calle": "C. de Meléndez Valdés, 64, 28015 Madrid",
+                "calidad": "four",
+                "descripcion": "Un kebab con mucho nombre por el centro de madrid, se nota que la carne es de buena calidad porque se nota en el sabor y en lo visual, solo te viene con salsa yogur y es algo ligera a lo que estoy acostumbrado.Es recomendable agregar el queso feta(con un pequeño coste adicional) para completar la experiencia, recomiendo mejor elegir el shawarma ya que este es bastante más crujiente que el pan de kebab y la salsa junto al queso está mejor distribuida, el kebab o el shawarma cuestan lo mismo 6,5€",
+                "notes": "",
+                "image": "https://lh5.googleusercontent.com/p/AF1QipM5cJGZ1w6AsxE29gQ7dPEk3M2r-vYqmvUYWM7F=w203-h270-k-no",
+                "icon": "fourStars"
+            }
         }
     ]
 }
