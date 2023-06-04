@@ -269,6 +269,57 @@
                 "image": "https://lh5.googleusercontent.com/p/AF1QipM5cJGZ1w6AsxE29gQ7dPEk3M2r-vYqmvUYWM7F=w203-h270-k-no",
                 "icon": "fourStars"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [40.427735, -3.531434]
+
+            },
+            "properties": {
+                "Name": "Mama doner kebab \n",
+                "Calle": "C. de Virgen del Templo, 28830 San Fernando de Henares, Madrid",
+                "calidad": "four",
+                "descripcion": "Un kebab que se encuentra en coslada, pedir un durum es pedir algo gigante e increíblemente bueno, mi recomendación si os encontráis por la zona, merece la pena visitar el sitio.",
+                "notes": "",
+                "image": "https://lh5.googleusercontent.com/p/AF1QipMSdEVtYl5Vzdmu9xMVEaxRD1xhwQlg9BTnJm-y=s405-k-no",
+                "icon": "fourStars"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [41.109482, 1.152392]
+
+            },
+            "properties": {
+                "Name": "Delhi kebab house \n",
+                "Calle": "Av. de Ramon d'Olzina, 83, local 4, 43480 Vila-seca, Tarragona\n",
+                "calidad": "five",
+                "descripcion": "Recomendación vista en twitter por el usuario @vultCastigao es ver la imagen y uno se enamora, 2 menús con el durum gratinado 11,50€. Se puede encontrar en Delhi pizzeria kebab en Tarragona y vila seca. Restaurante Montserrat en Tarragona. En este caso he puesto el Delhi y estoy deseando hacer un viajecito y probarlo. ",
+                "notes": "",
+                "image": "https://pbs.twimg.com/media/Fxs1OiSWcAQ14Jw?format=jpg&name=large",
+                "icon": "suggestion"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [40.331393, -3.770842]
+
+            },
+            "properties": {
+                "Name": "Saray Döner Kebap \n",
+                "Calle": "Av. Dr. Mendiguchía Carriche, 9, 28914 Leganés, Madrid",
+                "calidad": "four",
+                "descripcion": "Kebab normalito, es curioso probar uno con cordero en vez de ternera o pollo. ",
+                "notes": "",
+                "image": "https://lh5.googleusercontent.com/p/AF1QipMyup0v-EXGjzHEP3AXMKeYD7KyCGJf7uPcg_62=w203-h101-k-no",
+                "icon": "threeStars"
+            }
         }
     ]
 }
