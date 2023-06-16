@@ -257,6 +257,23 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
+                "coordinates": [37.605031, -0.977097]
+
+            },
+            "properties": {
+                "Name": "Kebab Al Andalus \n",
+                "Calle": "C. Juan de la Cueva, 2, 30203 Cartagena, Murcia",
+                "calidad": "five",
+                "descripcion": "Pan tostadito y calentito. Acompañadas de unas patatas perfectas, muchisima salsa concretamente 3 salsas, una de queso, picante y de yogurt. El durum tiene salsa de principio a fin. Menú desde 6€",
+                "notes": "",
+                "image": "https://lh5.googleusercontent.com/p/AF1QipOD2cmKSG0sre20XY2OWxfacXo1zhFlu-OYQNE8=w203-h270-k-no",
+                "icon": "suggestion"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
                 "coordinates": [40.43323, -3.716281]
 
             },
