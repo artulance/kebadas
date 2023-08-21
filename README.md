@@ -11,6 +11,6 @@ El mapa muestra las distintas ubicaciones recomendadas que visitar. Sigue un sis
 
 
 
-Puede visitarse en esta página [https://c1b3r.github.io/kebadas/](https://c1b3r.github.io/kebadas/ "https://c1b3r.github.io/kebadas/")
+Puede visitarse en esta página [https://artulance.github.io/kebadas/](https://artulance.github.io/kebadas/ "https://artulance.github.io/kebadas/")
 
 Las coordenadas han sido sacadas mediante [https://developers.google.com/maps/documentation/geocoding/overview?hl=es-419/](https://developers.google.com/maps/documentation/geocoding/overview?hl=es-419 "https://developers.google.com/maps/documentation/geocoding/overview?hl=es-419") 

@@ -338,5 +338,22 @@
                 "icon": "threeStars"
             }
         }
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [40.43543, -3.704626]
+
+            },
+            "properties": {
+                "Name": "Kebab Sumer \n",
+                "Calle": "C. de Bravo Murillo, 17-19, 28015 Madrid",
+                "calidad": "five",
+                "descripcion": "Muy bueno el kebab con la certeza de que tomas algo de calidad, natural y a un precio económico. La carne y el pan son excelentes, de lo mejorcito. También recomiendo las pizzas de este lugar. Tienen opción vegetariana, recomendable ir pronto porque si se llena tardarán en atender. ",
+                "notes": "",
+                "image": "https://lh3.googleusercontent.com/p/AF1QipMMEMYBnDp8w2_FuhHcyhrnZs0J_4psAJUCFmLn=s1360-w1360-h1020",
+                "icon": "fiveStars"
+            }
+        }
     ]
 }
