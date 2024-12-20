@@ -78,7 +78,7 @@
                 "Name": "Jalo \n",
                 "Calle": "C. de Atocha, 116, 28012 Madrid\n",
                 "calidad": "four",
-                "descripcion": "De los más conocidos por el centro, tiene una gran variedad de platos, pan normalito pero el sabor de la carne y la salsa no está mal.",
+                "descripcion": "De los más conocidos por el centro, tiene una gran variedad de platos, pan normalito pero el sabor de la carne y la salsa no está mal. Actualización del 2024, ha mejorado en salsa y tienen un durum barbacoa que merece la pena, la carne no es la típica que te suelen poner es como comer un filete de ternera y de buen sabor, merece la pena probarlo, en este caso solo lo tienen en formato durum",
                 "notes": "",
                 "image": "https://lh5.googleusercontent.com/p/AF1QipN0TdAF84cv6wNdTF8bK37KDiWYjp7XXDbbGpa-=w408-h338-k-no",
                 "icon": "fourStars"
@@ -131,6 +131,23 @@
                 "calidad": "three",
                 "descripcion": "De las opciones más baratas que puedes encontrar, es un kebab normalito en el que no destacarías gran cosa",
                 "notes": "",
+                "icon": "threeStars"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [40.327147,-3.760235]
+
+            },
+            "properties": {
+                "Name": "Kebabish leganes\n",
+                "Calle": "C. de la Margarita, 14, local 2, 28912 Leganés, Madrid\n",
+                "calidad": "three",
+                "descripcion": "Kebab pasable, atienden rápido, nada destacable, si estas por la zona y no tienes donde cenar, es una opción",
+                "notes": "",
+                "image": "https://lh5.googleusercontent.com/p/AF1QipOsOr_bvw_yGRSGFP3IwwkrRybk6ZncqXySuRsY=w408-h725-k-no",
                 "icon": "threeStars"
             }
         },
@@ -336,6 +353,23 @@
                 "notes": "",
                 "image": "https://lh5.googleusercontent.com/p/AF1QipMyup0v-EXGjzHEP3AXMKeYD7KyCGJf7uPcg_62=w203-h101-k-no",
                 "icon": "threeStars"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [40.406786,-3.692791]
+
+            },
+            "properties": {
+                "Name": "Jekes - Kebabs Pero Bien\n",
+                "Calle": "C. de Méndez Álvaro, 4, Arganzuela, 28045 Madrid",
+                "calidad": "four",
+                "descripcion": "Si un día quieres probar un kebab distinto a lo acostumbrado y tienes dinero (porque caro es un rato 13,90€ el menú) dale una oportunidad. Kebab bien crujiente y cargado, buen sabor de la carne especiada, eso si, tiene picante al igual que las patatas con cajún, no tienen salsa a no ser que pagues el extra a parte para que lo tengan. El local es muy pequeñito y no tiene terraza, tiene más pedidos a nivel online. El durum llega bien calentito en el caso que decidas pedir a domicilio. ",
+                "notes": "",
+                "image": "https://lh5.googleusercontent.com/p/AF1QipMWoV3d053ZEVLczr5wydLFMTsm_1XaQQ4PRWHo=w408-h544-k-no",
+                "icon": "fourStars"
             }
         },
         {
