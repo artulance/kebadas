@@ -40,21 +40,27 @@
       <link rel="stylesheet" type="text/css" href="/css/result-light.css"> -->
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/styles.css?v=0.0.1">
+    <link rel="stylesheet" type="text/css" href="resources/css/styles.css?v=0.0.2">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
 </head>
 
 <body>
-    <!-- <nav>
-
-        a href="#" data-target="popInformation" class="sidenav-trigger show-on-large"><i class="material-icons inline-icon ">menu</i></a> 
-    <img class="logo brand-logo center" alt="Logo" src="donerkebab.png">
-    <span>Kebadas map</span>
-    </nav> -->
+    <!-- Navigation -->
+    <nav class="white">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Kebadas</a>
+            <ul id="nav-mobile" class="right">
+                <li><a href="#" class="grey-text text-darken-2"><i class="material-icons">search</i></a></li>
+                <li><a href="https://github.com/artulance/kebadas" class="grey-text text-darken-2"><i class="material-icons">help_outline</i></a></li>
+            </ul>
+        </div>
+    </nav>
     <aside class="controls">
-        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">Filtros <i class="material-icons inline-icon ">filter_list</i></a>
+        <a data-target="slide-out"  href="#"class="sidenav-trigger btn-floating btn-large waves-effect waves-light white filters-button">
+            <i class="material-icons grey-text text-darken-2">filter_list</i>
+        </a>
     </aside>
 
     <ul id="slide-out" class="sidenav sidenav-menu">
@@ -118,33 +124,41 @@
     </ul>
 
 
-    <ul id="popInformation" class="sidenav sidenav-info">
-        <li><a class="sidenav-close" href="#!">Cerrar <i class="material-icons">close</i></a></li>
-        <li>
-            <div class="user-view">
-                <div class="background">
-                    <img id="image-site" src="resources/images/donerkebab.png">
+            <!-- Sidebar -->
+    <div id="popInformation" class="sidebar sidenav sidenav-info">
+        <div class="sidebar-content">
+            <a class="sidenav-close" href="#!">Cerrar <i class="material-icons">close</i></a>
+            <img src="resources/images/donerkebab.png" width="100%" id="image-site" alt="Restaurant" class="place-image">
+            <div class="place-info">
+                <h5 id="name" class="place-title">Ali Kebab</h5>
+                <!-- <p class="address grey-text">
+                    <i class="material-icons tiny">location_on</i>
+                    calle inventada
+                </p> -->
+                <div class="rating" id="ratings">
+                    <!-- <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i> -->
                 </div>
-                <!-- <a href="#user"><img class="circle" src="imagekebab"></a>
-       <a href="#info"><span class="white-text name">info</span></a>
-       <a href="#data"><span class="white-text email">data</span></a> -->
+                <div class="chips">
+                    <div class="chip">Kebab</div>
+                    <div class="chip">Take Away</div>
+                </div>
+                <div class="divider"></div>
+                <h6>Información</h6>
+                <p id="descripcion" class="description">
+                    
+                </p>
+                <a class="waves-effect waves-light btn-small" id="direccion" href="#!" target="_blank">
+                    <i class="material-icons left">directions</i>
+                    Cómo llegar
+                </a>
             </div>
-        </li>
-        <li>
-            <a tittle="Direccion" class="waves-effect" target="_blank" href="#!" id="direccion"></a>
-        </li>
-        <!-- <li><a href="#!">Second Link</a></li> -->
-        <li>
-            <div class="divider"></div>
-        </li>
-        <li><a class="subheader">Informacion</a></li>
-        <li>
-            <p id="name" class="subheader"></p>
-        </li>
-        <li>
-            <p id="descripcion"></p>
-        </li>
-    </ul>
+        </div>
+    </div>
+
 
 
 
@@ -156,7 +170,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="resources/js/script.js?v=0.0.1"></script>
+    <script src="resources/js/script.js?v=0.0.2"></script>
 
 
 

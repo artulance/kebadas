@@ -138,6 +138,7 @@ function showFlag(e) {
     let descripcion = document.getElementById('descripcion');
     let name = document.getElementById('name');
     let image = document.getElementById('image-site');
+    let ratings = document.getElementById('ratings');
     let imageInfo;
     var layer = e.target;
     var info = layer.feature.properties;
@@ -153,7 +154,17 @@ function showFlag(e) {
     descripcion.textContent = info.descripcion;
     name.textContent = info.Name;
     image.src = imageInfo;
+    ratings.innerHTML = drawStars(info.stars);
 
+}
+
+function drawStars(stars){
+    let html = "";
+    for (let i = 0; i < stars; i++) {
+        html += " <i class='material-icons'>star</i> "; //Metemos espacios porque si no saca otras estrellas
+    }
+    console.log(html)
+    return html;
 }
 
 function openMenu() {
